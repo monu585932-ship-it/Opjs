@@ -1,0 +1,100 @@
+/* ========================================
+   RESPONSIVE STYLES
+   ======================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .sidebar {
+        display: none;
+    }
+    
+    .sidebar.mobile-visible {
+        display: block;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .search-container {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .search-input {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .categories-container {
+        padding: 0 1rem;
+    }
+    
+    .category-btn {
+        padding: 0.4rem 1rem;
+        font-size: 0.75rem;
+    }
+    
+    .main-layout {
+        padding: 0 1rem;
+    }
+    
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .news-card {
+        margin-bottom: 0;
+    }
+    
+    .card-image {
+        height: 180px;
+    }
+    
+    .ai-insights {
+        flex-direction: column;
+        text-align: center;
+        margin: 1rem;
+        padding: 1rem;
+    }
+    
+    .ticker-item {
+        font-size: 0.7rem;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 1rem;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+    
+    .card-title {
+        font-size: 1rem;
+    }
+    
+    .ai-summary {
+        font-size: 0.7rem;
+    }
+    
+    .footer {
+        padding: 2rem 1rem;
+        font-size: 0.75rem;
+    }
+}

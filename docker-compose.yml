@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  newsai-web:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    restart: always
+  
+  newsai-redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+    restart: always
+  
+  newsai-worker:
+    build: .
+    command: node backend/workers/daily-refresh.js
+    depends_on:
+      - newsai-redis
+    restart: always
